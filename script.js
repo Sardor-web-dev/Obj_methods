@@ -26,11 +26,13 @@ let car = {
 }
 // 2. Соеденить в один новый объект Не мутируя старые
 const combinedObj = Object.assign({}, obj, car);
+
 // 3. Получить все ключи в новую переменную ключи
 let keys = Object.keys(combinedObj);
 
 // 4. Получить все значени в новую переменную значения
 const values = Object.values(combinedObj);
+
 // 5. Объеденить два полученных массива в одно целое
 const combinedArray = Object.assign([], keys, values);
 
@@ -41,6 +43,7 @@ let types = {
     object: [],
     boolean: []
 }
+
 for (const value of combinedArray) {
     const valueType = typeof value; 
     if(types.hasOwnProperty(valueType)) {
